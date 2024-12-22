@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Combate</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Juego de Combate</h1>
+    <div class="players">
+      <div class="player" id="player1">
+        <h2>Jugador 1</h2>
+        <p class="name">Nombre: <span id="player1-name">---</span></p>
+        <p class="health">Vida: <span id="player1-health">---</span></p>
+        <p class="class">Clase: <span id="player1-class">---</span></p>
+      </div>
+      <div class="player" id="player2">
+        <h2>Jugador 2</h2>
+        <p class="name">Nombre: <span id="player2-name">---</span></p>
+        <p class="health">Vida: <span id="player2-health">---</span></p>
+        <p class="class">Clase: <span id="player2-class">---</span></p>
+      </div>
+    </div>
+    <button id="start-game">Iniciar Batalla</button>
+    <button id="restart-game">Reiniciar Batalla</button>
+    <div class="log" id="battle-log"></div>
+  </div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
