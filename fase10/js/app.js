@@ -8,11 +8,14 @@ const personajeAleatorio = () => {
     return new Player(Characters[indiceAleatorio]);
 }
 
-//console.log(personajeAleatorio())
 
-// Crear jugadores
-const player1 = new Player(personajeAleatorio());
-const player2 = new Player(personajeAleatorio());
+let newPlayer1 = personajeAleatorio();
+let newPlayer2 = personajeAleatorio();
+
+if (newPlayer1.nombre === newPlayer2.nombre) {
+    newPlayer2 = personajeAleatorio();
+}
+
 
 // Referencias al DOM
 const player1Name = document.getElementById('player1-name');
@@ -29,7 +32,7 @@ const restartGameButton = document.getElementById('restart-game')
 
 
 // Inicializar el juego
-const game = new Game(player1, player2);
+let game = new Game(newPlayer1, newPlayer2);
 
 // Función para actualizar los jugadores en la interfaz
 function updatePlayersUI(player1, player2) {
@@ -55,20 +58,34 @@ function displayBattleLog() {
 // Manejar el inicio del juego
 startGameButton.addEventListener('click', () => {
     game.iniciarEncuentro();
-    updatePlayersUI(player1, player2);
+    updatePlayersUI(game.getPlayer1(), game.getPlayer2());
     displayBattleLog();
 });
 
+
+// Manejar el reinicio del juego
 restartGameButton.addEventListener('click', () => {
-    console.log('entro')
-    const player3 = new Player(personajeAleatorio());
-    const player4 = new Player(personajeAleatorio());
-    const game = new Game(player3, player4);
-    game.iniciarEncuentro();
-    updatePlayersUI(player3, player4ls);
+
+    // Generar nuevos jugadores
+    newPlayer1 = personajeAleatorio();
+    newPlayer2 = personajeAleatorio();
+
+    if (newPlayer1.nombre === newPlayer2.nombre) {
+        newPlayer2 = personajeAleatorio();
+    }
+
+    // Crear nueva instancia de juego
+    game = new Game(newPlayer1, newPlayer2)
+
+    // Limpiar y actualizar la interfaz
+    //battleLog.innerHTML = '';
+    battleLog.innerText = ''
+    updatePlayersUI(newPlayer1, newPlayer2);
+    game.iniciarEncuentro()
     displayBattleLog();
-})
+
+});
 
 
 // Inicializar UI
-updatePlayersUI(player1, player2);
+//updatePlayersUI(player1, player2);

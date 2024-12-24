@@ -21,7 +21,21 @@ export class Game {
         }
 
         this.#registro = [];
+
     }
+
+    getPlayer1() {
+        return this.#player1;
+    }
+
+    getPlayer2() {
+        return this.#player2;
+    }
+
+    getRegistro() {
+        return [...this.#registro];
+    }
+
 
 
     agregarRegistro(mensaje) {
@@ -80,10 +94,6 @@ export class Game {
 
     mostrarRegistro() {
         this.#registro.forEach(evento => console.log(evento));
-    }
-
-    getRegistro() {
-        return this.#registro
     }
 
 
