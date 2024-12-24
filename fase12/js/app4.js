@@ -19,4 +19,5 @@ const producto = { nombre: 'Tetera', precio: 500 }
 
 const carrito2 = [producto, ...carrito]
 
-console.log(carrito2)
+console.log('testando contenido')
+
