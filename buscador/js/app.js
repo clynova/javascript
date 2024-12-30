@@ -25,15 +25,26 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 function filtrarAutos() {
-    resultado.innerHTML = ''
+    limpiarHTML();
 
     const filtroAutos = autos.filter((auto) => {
         if (marca.value && auto.marca !== marca.value) return false;
         if (year.value && auto.year !== parseInt(year.value)) return false;
+        if (precioMinimo.value && auto.precio < parseInt(precioMinimo.value)) return false;
+        if (precioMaximo.value && auto.precio > parseInt(precioMaximo.value)) return false;
+        if (puertas.value && auto.puertas != parseInt(puertas.value)) return false, console.log('aqui no envia nada ', auto.puertas, puertas.value);
+        if (transmision.value && auto.transmision != transmision.value) return false;
+        if (color.value && auto.color != color.value) return false;
+
+        console.log(auto.puertas, puertas.value)
         return true
     })
 
     mostrarAutos(filtroAutos)
+}
+
+function limpiarHTML() {
+    resultado.innerHTML = ''
 }
 
 function mostrarAutos(autosFiltrados) {
@@ -45,8 +56,8 @@ function mostrarAutos(autosFiltrados) {
     autosFiltrados.forEach(auto => {
 
         const autoCard = document.createElement('div');
-        autoCard.classList.add('auto-card'); 
-        
+        autoCard.classList.add('auto-card');
+
         autoCard.innerHTML = `
             <h3 class="auto-title">${auto.marca} ${auto.modelo}</h3>
             <p><strong>Año:</strong> ${auto.year}</p>
