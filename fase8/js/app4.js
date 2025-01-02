@@ -5,11 +5,11 @@ const carrito = [
     { nombre: 'Monitor 4 pulgadas', precio: 400},
     { nombre: 'Monitor 5 pulgadas', precio: 500},
     { nombre: 'Monitor 6 pulgadas', precio: 600},
-]
+];
 
 carrito.forEach( function(producto) {
-    console.log(`${producto.nombre} tiene un valor ${producto.precio}`)
-})
+    console.log(`${producto.nombre} tiene un valor ${producto.precio}`);
+});
 
 
 const resultado = carrito.map(producto => {
@@ -19,4 +19,4 @@ const resultado = carrito.map(producto => {
     return null; // O algún otro valor manejable
 }).filter(item => item !== null); // Eliminar los valores nulos
 
-console.log(resultado)
+console.log(resultado);

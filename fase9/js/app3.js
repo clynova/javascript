@@ -4,25 +4,25 @@ const enviarMensaje = (titulo, mensaje, adjunto) => {
         titulo: titulo,
         mensaje: mensaje,
         adjunto: adjunto
-    }
+    };
 
-    const validacionMensaje = validarMensaje(mensajeParseado)
+    const validacionMensaje = validarMensaje(mensajeParseado);
 
     if (!validacionMensaje) {
-        return { estadoEnvio :'Error envio', codigoEnvio: 500, mensaje: mensajeParseado}
+        return { estadoEnvio :'Error envio', codigoEnvio: 500, mensaje: mensajeParseado};
     }
 
-    console.log('Enviando mensaje....')
-    return { estadoEnvio :'Envio exitoso', codigoEnvio: 200, mensaje: mensajeParseado}
+    console.log('Enviando mensaje....');
+    return { estadoEnvio :'Envio exitoso', codigoEnvio: 200, mensaje: mensajeParseado};
 
-}
-
-
-const validarMensaje = (mensaje) => {
-    return true
-}
+};
 
 
-const { estadoEnvio, codigoEnvio, mensaje} = enviarMensaje('Para papa', 'Espero que te encuentres bien, saludos', 'Sin adjunto')
+const validarMensaje = () => {
+    return true;
+};
 
-console.log(estadoEnvio, codigoEnvio)
+
+const { estadoEnvio, codigoEnvio} = enviarMensaje('Para papa', 'Espero que te encuentres bien, saludos', 'Sin adjunto');
+
+console.log(estadoEnvio, codigoEnvio);

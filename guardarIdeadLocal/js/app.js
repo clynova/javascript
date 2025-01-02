@@ -1,5 +1,5 @@
-const submit = document.querySelector('form input')
-const tweet = document.querySelector('#tweet')
+const submit = document.querySelector('form input');
+const tweet = document.querySelector('#tweet');
 const tweetList = document.querySelector('#lista-tweets');
 
 let storedTweets = JSON.parse(localStorage.getItem('tweets')) || [];
@@ -7,21 +7,21 @@ let storedTweets = JSON.parse(localStorage.getItem('tweets')) || [];
 
 
 
-renderTweets()
+renderTweets();
 
 submit.addEventListener('click', (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const contenidoTweet = tweet.value.trim();
     if (contenidoTweet) {
-        guardarTweet(contenidoTweet)
-        tweet.value = ''
+        guardarTweet(contenidoTweet);
+        tweet.value = '';
     }
-})
+});
 
 function guardarTweet(tweet) {
-    storedTweets.push(tweet)
-    const StringTweets = JSON.stringify(storedTweets)
-    localStorage.setItem('tweets', StringTweets)
+    storedTweets.push(tweet);
+    const StringTweets = JSON.stringify(storedTweets);
+    localStorage.setItem('tweets', StringTweets);
     renderTweets();
 }
 
@@ -44,7 +44,7 @@ function renderTweets() {
 }
 
 function eliminarTweet(e) {
-    const tweetIndex = e.target.getAttribute('data-index')
+    const tweetIndex = e.target.getAttribute('data-index');
     storedTweets.splice(tweetIndex, 1);
     localStorage.setItem('tweets', JSON.stringify(storedTweets));
     renderTweets();

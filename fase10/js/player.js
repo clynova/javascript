@@ -1,4 +1,4 @@
-export class Player {
+/*export class Player {
     #nombre;
     #clase;
     #vida;
@@ -79,4 +79,4 @@ export class Player {
     estaVivo() {
         return this.#vida > 0;
     }
-}
+}*/

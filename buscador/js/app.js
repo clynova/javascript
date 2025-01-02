@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     filtrarAutos();
 
-})
+});
 
 function filtrarAutos() {
     limpiarHTML();
@@ -36,15 +36,15 @@ function filtrarAutos() {
         if (transmision.value && auto.transmision != transmision.value) return false;
         if (color.value && auto.color != color.value) return false;
 
-        console.log(auto.puertas, puertas.value)
-        return true
-    })
+        console.log(auto.puertas, puertas.value);
+        return true;
+    });
 
-    mostrarAutos(filtroAutos)
+    mostrarAutos(filtroAutos);
 }
 
 function limpiarHTML() {
-    resultado.innerHTML = ''
+    resultado.innerHTML = '';
 }
 
 function mostrarAutos(autosFiltrados) {
@@ -76,9 +76,9 @@ function llenarSelectYears() {
     const minYear = maxYears - 10;
 
     for (let i = maxYears; i >= minYear; i--) {
-        const opcion = document.createElement('option')
+        const opcion = document.createElement('option');
         opcion.value = i;
         opcion.textContent = i;
-        year.appendChild(opcion)
+        year.appendChild(opcion);
     }
 }

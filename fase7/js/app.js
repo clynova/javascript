@@ -1,8 +1,8 @@
-const producto = {
-    nombre: "Monito 20 pulgadas",
+/*const producto = {
+    nombre: 'Monito 20 pulgadas',
     precio: 500,
     disponible: true
-}
+};
 
 /*
 console.log(producto)
@@ -23,7 +23,7 @@ console.log(nombre)
 //const { nombre, precio, disponible } = producto
 
 const producto2 = {
-    nombre: "Monito 20 pulgadas",
+    nombre: 'Monito 20 pulgadas',
     precio: 500,
     disponible: true,
     informacion: {
@@ -35,12 +35,12 @@ const producto2 = {
     fabricacion: {
         pais: 'China'
     }
-}
+};
 
 //console.log(producto2)
 
 //const { peso } = producto2.informacion.medidas
 
-const { nombre, informacion, informacion: { medidas, medidas: { peso } } } = producto2
+const { nombre, informacion: { medidas: { peso } } } = producto2;
 
-console.log(nombre, peso)
+console.log(nombre, peso);

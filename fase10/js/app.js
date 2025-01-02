@@ -6,7 +6,7 @@ import { Game } from './game.js'; // Tu clase de lógica del juego
 const personajeAleatorio = () => {
     const indiceAleatorio = Math.floor(Math.random() * Characters.length);
     return new Player(Characters[indiceAleatorio]);
-}
+};
 
 
 let newPlayer1 = personajeAleatorio();
@@ -28,7 +28,7 @@ const player2Class = document.getElementById('player2-class');
 
 const battleLog = document.getElementById('battle-log');
 const startGameButton = document.getElementById('start-game');
-const restartGameButton = document.getElementById('restart-game')
+const restartGameButton = document.getElementById('restart-game');
 
 
 // Inicializar el juego
@@ -75,13 +75,13 @@ restartGameButton.addEventListener('click', () => {
     }
 
     // Crear nueva instancia de juego
-    game = new Game(newPlayer1, newPlayer2)
+    game = new Game(newPlayer1, newPlayer2);
 
     // Limpiar y actualizar la interfaz
     //battleLog.innerHTML = '';
-    battleLog.innerText = ''
+    battleLog.innerText = '';
     updatePlayersUI(newPlayer1, newPlayer2);
-    game.iniciarEncuentro()
+    game.iniciarEncuentro();
     displayBattleLog();
 
 });

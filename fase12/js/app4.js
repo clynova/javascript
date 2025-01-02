@@ -1,8 +1,8 @@
 // Array de meses del año
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
 
-const meses2 = [...meses, 'Agosto']
-console.log(meses2)
+const meses2 = [...meses, 'Agosto'];
+console.log(meses2);
 
 
 const carrito = [
@@ -15,9 +15,9 @@ const carrito = [
 ];
 
 
-const producto = { nombre: 'Tetera', precio: 500 }
+const producto = { nombre: 'Tetera', precio: 500 };
 
-const carrito2 = [producto, ...carrito]
+const carrito2 = [producto, ...carrito];
 
-console.log('testando contenido')
+console.log('testando contenido', carrito2);
 

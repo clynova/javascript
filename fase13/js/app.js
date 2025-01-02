@@ -1,41 +1,31 @@
-let elemento;
-
-elemento = document.all;
-elemento = document.head
-elemento = document.body
-elemento = document.domain
-elemento = document.forms
-elemento = document.forms[0].method
-elemento = document.scripts
-
 //console.log(elemento) 
 
-const classPlayers = document.getElementsByClassName('players')
+const classPlayers = document.getElementsByClassName('players');
 
-console.log(classPlayers)
+console.log(classPlayers);
 
-const classHealth = document.getElementsByClassName('health')
+const classHealth = document.getElementsByClassName('health');
 
-console.log(classHealth)
+console.log(classHealth);
 
-const formulario = document.getElementById('formulario')
+const formulario = document.getElementById('formulario');
 
-console.log(formulario)
+console.log(formulario);
 
-const formularioQuery = document.querySelector('.formulario .form')
-console.log(formularioQuery)
+const formularioQuery = document.querySelector('.formulario .form');
+console.log(formularioQuery);
 
-const formEmail = document.getElementById('email')
-console.log(formEmail)
+const formEmail = document.getElementById('email');
+console.log(formEmail);
 
-const emailQuery = document.querySelector('.formulario .email')
-console.log(emailQuery)
+const emailQuery = document.querySelector('.formulario .email');
+console.log(emailQuery);
 
-formEmail.value = 'asdas'
+formEmail.value = 'asdas';
 
-const nombreView = document.querySelector('.player:nth-child(2) .name span')
-nombreView.textContent = 'Hey'
-console.log(nombreView)
+const nombreView = document.querySelector('.player:nth-child(2) .name span');
+nombreView.textContent = 'Hey';
+console.log(nombreView);
 
 
 
@@ -66,31 +56,31 @@ tituloDelJuego.innerText = 'Titulo del videojuego innerText';
 // Este texto es sensible a estilos CSS como `display: none` o `visibility: hidden`, por lo que solo afecta el texto visible.
 tituloDelJuego.innerHTML = 'Titulo del <strong>videojuego</strong> innerHTML';
 
-console.log(tituloDelJuego)
+console.log(tituloDelJuego);
 
-const logo = document.querySelector('.image-logo')
-logo.src = './img/logo1.png'
-logo.classList.add = 'new-class'
-console.log(logo.classList)
+const logo = document.querySelector('.image-logo');
+logo.src = './img/logo1.png';
+logo.classList.add = 'new-class';
+console.log(logo.classList);
 
 
-const navegacion =  document.querySelector('.navbar-links')
+const navegacion =  document.querySelector('.navbar-links');
 //console.log(navegacion.children)
 
-const playersQueryAll = document.querySelector('.players')
+const playersQueryAll = document.querySelector('.players');
 
-playersQueryAll.children[0].children[1].children[0].textContent = 'saludes'
+playersQueryAll.children[0].children[1].children[0].textContent = 'saludes';
 
 
-console.log(playersQueryAll.parentNode)
+console.log(playersQueryAll.parentNode);
 
-const playerQuery = document.querySelector('.player')
-console.log(playerQuery.nextElementSibling)
+const playerQuery = document.querySelector('.player');
+console.log(playerQuery.nextElementSibling);
 
-const enlace = document.createElement('A')
-enlace.textContent = 'Nuevo enlace'
-enlace.href = './index.html'
-enlace.target = '_blank'
-console.log(enlace)
+const enlace = document.createElement('A');
+enlace.textContent = 'Nuevo enlace';
+enlace.href = './index.html';
+enlace.target = '_blank';
+console.log(enlace);
 
-navegacion.appendChild(enlace)
+navegacion.appendChild(enlace);

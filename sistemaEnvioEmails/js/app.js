@@ -24,28 +24,28 @@ document.addEventListener('DOMContentLoaded', function () {
         email: false,
         asunto: false,
         mensaje: false
-    }
+    };
 
     // Asignar un único evento de validación a cada input
     Object.entries(inputs).forEach(([key, input]) => {
         input.addEventListener('input', () => {
             validarCampo(input, validadores[key], errores[key], key, formularioValido); // Valida el contenido del campo
-            console.log(formularioValido)
+            console.log(formularioValido);
         });
     });
 
 
-    const btnReset = document.querySelector('#formulario button[type="reset"]')
-    const formulario = document.querySelector('#formulario')
+    const btnReset = document.querySelector('#formulario button[type="reset"]');
+    const formulario = document.querySelector('#formulario');
 
     btnReset.addEventListener('click', (e) => {
         e.preventDefault();
         formularioValido.email = false;
         formularioValido.asunto = false;
         formularioValido.mensaje = false;
-        actviarButtonFormulario(formularioValido)        
+        actviarButtonFormulario(formularioValido);        
         formulario.reset();
-    })
+    });
 
     //console.log(formularioValido)
 });
@@ -56,29 +56,29 @@ function validarCampo(input, validador, errorContenedor, key, formulario) {
     limpiarError(errorContenedor);
     if (input.value.trim() === '') {
         mostrarAlerta(errorContenedor, 'Este campo es obligatorio.');
-        formulario[key] = false
+        formulario[key] = false;
         actviarButtonFormulario(formulario);
-        return
+        return;
     } else {
         if (!validador(input.value)) {
             mostrarAlerta(errorContenedor, `${input.id} no es válido.`);
-            formulario[key] = false
+            formulario[key] = false;
             actviarButtonFormulario(formulario);
-            return
+            return;
         }
     }
-    formulario[key] = true
+    formulario[key] = true;
     actviarButtonFormulario(formulario);
 }
 
 function actviarButtonFormulario(formulario) {
-    const buttonSubmit = document.querySelector('button')
+    const buttonSubmit = document.querySelector('button');
     if (!Object.values(formulario).includes(false)) {
-        buttonSubmit.disabled = true
-        buttonSubmit.classList.remove('opacity-50')
+        buttonSubmit.disabled = true;
+        buttonSubmit.classList.remove('opacity-50');
     } else {
-        buttonSubmit.disabled = true
-        buttonSubmit.classList.add('opacity-50')
+        buttonSubmit.disabled = true;
+        buttonSubmit.classList.add('opacity-50');
     }
 }
 
@@ -88,11 +88,11 @@ function validarEmail(email) {
 }
 
 function validarAsunto(asunto) {
-    return (asunto.length > 10)
+    return (asunto.length > 10);
 }
 
 function validarMensaje(mensaje) {
-    return (mensaje.length > 10)
+    return (mensaje.length > 10);
 }
 
 

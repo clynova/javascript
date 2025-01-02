@@ -25,14 +25,14 @@ console.log(password1 != password2)
 
 */
 
-let numero
+let numero;
 
 
-console.log(numero)
-console.log(typeof(numero))
+console.log(numero);
+console.log(typeof(numero));
 
-let numero2 = null
-console.log(numero2)
-console.log(typeof(numero2))
+let numero2 = null;
+console.log(numero2);
+console.log(typeof(numero2));
 
-console.log(numero === numero2)
+console.log(numero === numero2);
