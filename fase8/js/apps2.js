@@ -30,5 +30,4 @@ console.table(resultado);
 
 resultado.splice(1, 1);
 
-
 console.table(resultado);

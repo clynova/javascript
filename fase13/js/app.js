@@ -27,9 +27,6 @@ const nombreView = document.querySelector('.player:nth-child(2) .name span');
 nombreView.textContent = 'Hey';
 console.log(nombreView);
 
-
-
-
 // Selecciona el elemento <h1> que está dentro del contenedor con clase "game-container"
 const tituloDelJuego = document.querySelector('.game-container h1');
 
@@ -63,14 +60,12 @@ logo.src = './img/logo1.png';
 logo.classList.add = 'new-class';
 console.log(logo.classList);
 
-
 const navegacion =  document.querySelector('.navbar-links');
 //console.log(navegacion.children)
 
 const playersQueryAll = document.querySelector('.players');
 
 playersQueryAll.children[0].children[1].children[0].textContent = 'saludes';
-
 
 console.log(playersQueryAll.parentNode);
 

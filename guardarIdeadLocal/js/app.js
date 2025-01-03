@@ -4,9 +4,6 @@ const tweetList = document.querySelector('#lista-tweets');
 
 let storedTweets = JSON.parse(localStorage.getItem('tweets')) || [];
 
-
-
-
 renderTweets();
 
 submit.addEventListener('click', (e) => {

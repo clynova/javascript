@@ -26,7 +26,6 @@ const producto3 = {
     disponible: true
 };
 
-
 const { precio } = producto;
 console.log(precio);
 
@@ -41,6 +40,4 @@ const [ primero, ...tercero] = numeros
 console.log(tercero)
 
 */
-
-
 

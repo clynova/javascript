@@ -5,24 +5,19 @@ function Empresa(nombre, saldo, categoria) {
     this.categoria = categoria;
 }
 
-
 function formatearEmpresa(empresa) {
     const { nombre, saldo, categoria } = empresa;
     return `La empresa ${nombre} tiene un saldo de ${saldo} se encarga de ${categoria}`;
 }
 
-
 const CCJ = new Empresa('Loxus', 50000, 'Cursos de pablito');
 
-
 console.log(formatearEmpresa(CCJ));
-
 
 function Cliente(nombre, saldo) {
     this.nombre = nombre;
     this.saldo = saldo;
 }
-
 
 Cliente.prototype.tipoCliente = function () {
     let tipo;
@@ -36,13 +31,9 @@ Cliente.prototype.tipoCliente = function () {
     return tipo;
 };
 
-
-
 const juan = new Cliente('Juan', 500);
 
-
 console.log(juan.tipoCliente());
-
 
 function Persona(nombre, saldo, telefono) {
     Cliente.call(this, nombre, saldo);

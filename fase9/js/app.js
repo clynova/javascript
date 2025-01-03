@@ -1,7 +1,6 @@
 const numero1 = 5;
 const numero2 = 10;
 
-
 function sumar(dato1 = 0, dato2 = 0) {
     return dato1 + dato2;
 }

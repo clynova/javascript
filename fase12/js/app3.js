@@ -9,7 +9,5 @@ console.log(resultado);
 
 const resultadoConcat = [...meses, ...meses2, ...meses3];
 
-
 console.log(resultadoConcat);
-
 

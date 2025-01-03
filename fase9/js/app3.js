@@ -17,11 +17,9 @@ const enviarMensaje = (titulo, mensaje, adjunto) => {
 
 };
 
-
 const validarMensaje = () => {
     return true;
 };
-
 
 const { estadoEnvio, codigoEnvio} = enviarMensaje('Para papa', 'Espero que te encuentres bien, saludos', 'Sin adjunto');
 

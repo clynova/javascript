@@ -7,7 +7,6 @@ const carrito = [
     { nombre: 'Monitor 6 pulgadas', precio: 600 },
 ];
 
-
 const nuevoArreglo = carrito.map((producto) => {
     return `este producto ${producto.nombre} vale ${producto.precio}`;
 });

@@ -11,23 +11,15 @@ const carrito = [
     { nombre: 'Celular', precio: 600 },
 ];
 
-
 let total = 0;
 
 carrito.forEach(producto => total += producto.precio);
 
-
 console.log(total);
-
-
-
 
 let resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
 
 console.log(resultado);
-
-
-
 
 const carritoFiltrado = carrito.filter(producto => {
     if (producto.precio > 300) {

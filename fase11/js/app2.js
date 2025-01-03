@@ -13,7 +13,6 @@ while (i <= 10) {
 
 let p = 1000;
 
-
 do {
 
     console.log(`${p} Se ejecuta al menos una vez`);
@@ -21,15 +20,11 @@ do {
     p++;
 } while (p < 10);
 
-
-
 const pendientes = ['Tarea', 'Comer', 'Estuadiar', 'Proyecto', 'Mirar guias'];
-
 
 pendientes.forEach((pendiente, indice) => {
     console.log(`El Producto ${indice} es :  ${pendiente}`);
 });
-
 
 const automovil = {
     modelo: 'Mazda',

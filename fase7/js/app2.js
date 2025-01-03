@@ -14,7 +14,6 @@ const producto = {
 
 //console.log(Object.isSealed(producto))
 
-
 const medidas = {
     peso: '1kg',
     medidas: '1m',

@@ -10,16 +10,13 @@
 
 //productoLiteral.mostrarInfo()
 
-
 function ProductoConstructor(nombre, precio, disponible){
     this.nombre = nombre;
     this.precio = precio;
     this.disponible = disponible;
 }
 
-
 const producto = new ProductoConstructor('Television', 500, false);
-
 
 //console.log(producto)
 

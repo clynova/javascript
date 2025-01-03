@@ -5,7 +5,6 @@ const reproductor = {
         console.log(`Reproduciendo playlist ${nombre}`);
     },
 
-
     set nuevaCancion(cancion) {
         this.cancion = cancion;
         console.log(`Agregando ${cancion}`);
@@ -16,9 +15,6 @@ const reproductor = {
     }
 
 };
-
-
-
 
 reproductor.reproducirPlayList('Mi musica favorita');
 reproductor.nuevaCancion = 'Mi pollito pio pio';

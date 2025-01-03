@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
     const btnReset = document.querySelector('#formulario button[type="reset"]');
     const formulario = document.querySelector('#formulario');
 
@@ -94,7 +93,6 @@ function validarAsunto(asunto) {
 function validarMensaje(mensaje) {
     return (mensaje.length > 10);
 }
-
 
 // Función para mostrar el mensaje de error
 function mostrarAlerta(errorContenedor, mensaje) {

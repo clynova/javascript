@@ -4,7 +4,6 @@ const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
 const meses2 = [...meses, 'Agosto'];
 console.log(meses2);
 
-
 const carrito = [
     { nombre: 'Monitor 1 pulgadas', precio: 100 },
     { nombre: 'Television', precio: 200 },
@@ -13,7 +12,6 @@ const carrito = [
     { nombre: 'Teclado', precio: 500 },
     { nombre: 'Celular', precio: 600 },
 ];
-
 
 const producto = { nombre: 'Tetera', precio: 500 };
 

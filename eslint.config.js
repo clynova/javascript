@@ -23,6 +23,10 @@ export default [
             quotes: ['error', 'single'], // Usa comillas simples
             'no-unused-vars': 'warn', // Advierte sobre variables no usadas
             'no-console': 'off', // Permite el uso de console.log
+            'no-multiple-empty-lines': [
+                'error', // Nivel de severidad: "error" o "warn"
+                { max: 1 }, // Permitir como máximo una línea vacía consecutiva
+            ],
         },
     },
 ];

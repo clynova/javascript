@@ -11,7 +11,6 @@ carrito.forEach( function(producto) {
     console.log(`${producto.nombre} tiene un valor ${producto.precio}`);
 });
 
-
 const resultado = carrito.map(producto => {
     if (producto.precio === 300) {
         return producto;

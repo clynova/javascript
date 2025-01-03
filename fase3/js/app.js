@@ -2,7 +2,6 @@ const producto = '                 Monitor de 20 pulgadas      ~';
 const producto2 = String('Monitor de 24 pulgadas');
 const producto3 = new String('MOnitor de 27 pulgadas');
 
-
 console.log(producto);
 console.log(producto2);
 console.log(producto3);
@@ -13,7 +12,6 @@ console.log(producto.indexOf('pulgadas'));
 console.log(producto.includes('pulgadas'));
 
 console.log(`El producto ${producto} tiene un precio de 50 dolares`);
-
 
 console.log(producto.trimStart());
 console.log(producto.trimEnd());

@@ -24,8 +24,6 @@ for (let i = 0; i < meses.length; i++) {
     //console.log(`Los meses siguientes son feos: ${i+1} ${meses[i]}`) 
 }
 
-
-
 const carrito = [];
 
 const producto = {
@@ -45,7 +43,6 @@ const producto3 = {
     precio: 300,
     disponible: true
 };
-
 
 carrito.push(producto);
 carrito.push(producto2);

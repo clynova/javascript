@@ -36,8 +36,6 @@ export class Game {
         return [...this.#registro];
     }
 
-
-
     agregarRegistro(mensaje) {
         this.#registro.push(mensaje);
     }
@@ -96,9 +94,7 @@ export class Game {
         this.#registro.forEach(evento => console.log(evento));
     }
 
-
 }
-
 
 /*
 // Crear jugadores

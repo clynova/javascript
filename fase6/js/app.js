@@ -6,7 +6,5 @@ const boolean3 = 'true';
 console.log(boolean1);
 console.log(boolean2);
 
-
 console.log(boolean1 == boolean3);
-
 

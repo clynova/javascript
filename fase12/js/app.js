@@ -37,6 +37,5 @@ console.log(existe); // Imprime "true" si 'Celular' existe en el carrito, de lo 
 const producto = carrito.find((producto) => producto.nombre === 'Celular');
 console.log(producto); // Imprime el objeto del 'Celular' o "undefined" si no existe
 
-
 const indice = meses.findIndex( mes => mes === 'Abril');
 console.log(indice);
