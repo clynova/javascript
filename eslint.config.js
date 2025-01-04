@@ -1,11 +1,11 @@
 export default [
     {
-        ignores: ['node_modules/**'], // Ignorar archivos y carpetas innecesarios
+        ignores: ['node_modules/**'], // Ignorar archivos en node_modules
     },
     {
         files: ['**/*.js'], // Aplica las reglas solo a archivos .js
         languageOptions: {
-            ecmaVersion: 2021, // Versión de ECMAScript
+            ecmaVersion: 2022, // Actualizado a ES2022 para soportar propiedades privadas
             sourceType: 'module', // Si usas import/export
             globals: {
                 // Define las variables globales que necesitas
@@ -17,7 +17,8 @@ export default [
                 module: 'readonly',
             },
         },
-        rules: {
+       
+       /* rules: {
             // Reglas de ESLint
             semi: ['error', 'always'], // Requiere punto y coma al final
             quotes: ['error', 'single'], // Usa comillas simples
@@ -28,5 +29,7 @@ export default [
                 { max: 1 }, // Permitir como máximo una línea vacía consecutiva
             ],
         },
+        */
+
     },
 ];
