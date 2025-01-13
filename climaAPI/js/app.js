@@ -29,7 +29,7 @@ function buscarClima(e) {
 
 function conectarApi(pais, ciudad) {
 
-    const API = 'db0542980944a96dfe20eafdf8001b7d'
+    const API = ' '
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${API}`;
 
     fetch(URL)
