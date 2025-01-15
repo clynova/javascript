@@ -28,7 +28,7 @@ function buscarImagenes(e) {
 
 
 function conectarBuscadorImagenesAPI(textoBusqueda) {
-    const API_KEY = `48233745-5e2b4cb93faa08bd2e4b79a23`
+    const API_KEY = ``
     const URL_BUSQUEDA = `https://pixabay.com/api/?key=${API_KEY}&q=${textoBusqueda}&image_type=photo&per_page=100`
 
     fetch(URL_BUSQUEDA)
