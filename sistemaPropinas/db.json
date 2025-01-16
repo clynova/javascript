@@ -1,0 +1,184 @@
+{
+    "platillos": [
+        {
+            "id": 1,
+            "nombre": "Pizza a la peruana",
+            "precio": 30,
+            "Categoria": 1
+        },
+        {
+            "id": 2,
+            "nombre": "Tacos al pastor",
+            "precio": 15,
+            "Categoria": 2
+        },
+        {
+            "id": 3,
+            "nombre": "Ceviche mixto",
+            "precio": 25,
+            "Categoria": 3
+        },
+        {
+            "id": 4,
+            "nombre": "Hamburguesa clásica",
+            "precio": 20,
+            "Categoria": 1
+        },
+        {
+            "id": 5,
+            "nombre": "Lomo saltado",
+            "precio": 35,
+            "Categoria": 3
+        },
+        {
+            "id": 6,
+            "nombre": "Sushi roll California",
+            "precio": 18,
+            "Categoria": 4
+        },
+        {
+            "id": 7,
+            "nombre": "Ramen japonés",
+            "precio": 22,
+            "Categoria": 4
+        },
+        {
+            "id": 8,
+            "nombre": "Ensalada César",
+            "precio": 12,
+            "Categoria": 5
+        },
+        {
+            "id": 9,
+            "nombre": "Burrito de carne",
+            "precio": 17,
+            "Categoria": 2
+        },
+        {
+            "id": 10,
+            "nombre": "Pollo a la brasa",
+            "precio": 28,
+            "Categoria": 3
+        },
+        {
+            "id": 11,
+            "nombre": "Chifa especial",
+            "precio": 26,
+            "Categoria": 4
+        },
+        {
+            "id": 12,
+            "nombre": "Panqueques con miel",
+            "precio": 10,
+            "Categoria": 5
+        },
+        {
+            "id": 13,
+            "nombre": "Arepas venezolanas",
+            "precio": 14,
+            "Categoria": 6
+        },
+        {
+            "id": 14,
+            "nombre": "Empanadas argentinas",
+            "precio": 12,
+            "Categoria": 6
+        },
+        {
+            "id": 15,
+            "nombre": "Fetuccini Alfredo",
+            "precio": 24,
+            "Categoria": 1
+        },
+        {
+            "id": 16,
+            "nombre": "Chaufa de mariscos",
+            "precio": 30,
+            "Categoria": 4
+        },
+        {
+            "id": 17,
+            "nombre": "Chilaquiles verdes",
+            "precio": 13,
+            "Categoria": 2
+        },
+        {
+            "id": 18,
+            "nombre": "Asado de tira",
+            "precio": 40,
+            "Categoria": 3
+        },
+        {
+            "id": 19,
+            "nombre": "Sopa minestrone",
+            "precio": 15,
+            "Categoria": 5
+        },
+        {
+            "id": 20,
+            "nombre": "Tiramisú clásico",
+            "precio": 12,
+            "Categoria": 7
+        },
+        {
+            "id": 21,
+            "nombre": "Helado de chocolate",
+            "precio": 8,
+            "Categoria": 7
+        },
+        {
+            "id": 22,
+            "nombre": "Arroz con leche",
+            "precio": 7,
+            "Categoria": 7
+        },
+        {
+            "id": 23,
+            "nombre": "Pizza napolitana",
+            "precio": 32,
+            "Categoria": 1
+        },
+        {
+            "id": 24,
+            "nombre": "Calzone de jamón y queso",
+            "precio": 28,
+            "Categoria": 1
+        },
+        {
+            "id": 25,
+            "nombre": "Anticuchos peruanos",
+            "precio": 20,
+            "Categoria": 3
+        },
+        {
+            "id": 26,
+            "nombre": "Crema volteada",
+            "precio": 9,
+            "Categoria": 7
+        },
+        {
+            "id": 27,
+            "nombre": "Sándwich cubano",
+            "precio": 18,
+            "Categoria": 6
+        },
+        {
+            "id": 28,
+            "nombre": "Tallarines verdes",
+            "precio": 22,
+            "Categoria": 3
+        },
+        {
+            "id": 29,
+            "nombre": "Causa limeña",
+            "precio": 15,
+            "Categoria": 3
+        },
+        {
+            "id": 30,
+            "nombre": "Carne mechada",
+            "precio": 27,
+            "Categoria": 6
+        }
+    ]
+}
