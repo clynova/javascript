@@ -1,0 +1,18 @@
+{
+  "clientes": [
+    {
+      "nombre": "Perritox",
+      "email": "2eQ!@gmail.comx",
+      "telefono": "1231",
+      "empresa": "213",
+      "id": "45eb"
+    },
+    {
+      "nombre": "Tontitox",
+      "email": "ton@gmail.com",
+      "telefono": "352345",
+      "empresa": "1234123",
+      "id": "410e"
+    }
+  ]
+}

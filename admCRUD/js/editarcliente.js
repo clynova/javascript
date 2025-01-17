@@ -54,8 +54,6 @@
 
     function modificarCliente() {
 
-
-
         const nombre = formulario.querySelector('#nombre').value
         const email = formulario.querySelector('#email').value
         const telefono = formulario.querySelector('#telefono').value
