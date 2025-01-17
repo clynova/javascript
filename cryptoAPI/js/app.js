@@ -14,34 +14,30 @@ function eventListeners() {
     formulario.addEventListener('submit', conectarApiCrypto)
 }
 
-function conectarCryptoTop10Api() {
+async function conectarCryptoTop10Api() {
     const valorMoneda = moneda.value
     const API_URL = `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=${valorMoneda}`
     const API_URL_COMPLETA = `${API_URL}&api_key=${API_KEY}`
+    try {
+        const response = await fetch(API_URL_COMPLETA)
+        const responseJson = await response.json()
+        cargarTopMonedas(responseJson.Data)
 
-    fetch(API_URL_COMPLETA)
-        .then(result => {
-            if (!result.ok) {
-                throw new Error(`No se encontraron datos para la moneda seleccionada`)
-            }
-            return result.json()
-        })
-        .then(result => {
-            return cargarTopMonedas(result.Data)
-        })
-        .catch(result => console.error(result))
+    } catch (err) {
+        console.error(err)
+    }
 }
 
-function cargarTopMonedas(data) {   
-    data.forEach(element => {    
+function cargarTopMonedas(data) {
+    data.forEach(element => {
         const option = document.createElement('option')
         option.value = element.CoinInfo.Name
-        option.textContent =  element.CoinInfo.FullName
+        option.textContent = element.CoinInfo.FullName
         criptomonedas.appendChild(option)
     });
 }
 
-function conectarApiCrypto(e) {//
+async function conectarApiCrypto(e) {//
     e.preventDefault()
     const valorMoneda = moneda.value
     const valorCrypto = criptomonedas.value
@@ -50,18 +46,14 @@ function conectarApiCrypto(e) {//
 
     const API_URL = `https://min-api.cryptocompare.com/data/price?fsym=${valorCrypto}&tsyms=${valorMoneda}`
     const API_URL_COMPLETA = `${API_URL}&api_key=${API_KEY}`
-
-    fetch(API_URL_COMPLETA)
-        .then(result => {
-            if (!result.ok) {
-                throw new Error(`No se encontraron datos para la moneda seleccionada`)
-            }
-            return result.json()
-        })
-        .then(result => {
-            mostrarResultadoCotizacion(result)
-        })
-        .catch(result => console.error(result))
+    
+    try {
+        const response = await fetch(API_URL_COMPLETA)
+        const responseJson = await response.json()
+        mostrarResultadoCotizacion(responseJson)    
+    } catch (err) {
+        console.error(err)
+    }       
 }
 
 
