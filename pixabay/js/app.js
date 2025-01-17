@@ -27,27 +27,18 @@ function buscarImagenes(e) {
 }
 
 
-function conectarBuscadorImagenesAPI(textoBusqueda) {
-    const API_KEY = ``
+async function conectarBuscadorImagenesAPI(textoBusqueda) {
+    const API_KEY = `48233745-5e2b4cb93faa08bd2e4b79a23`
     const URL_BUSQUEDA = `https://pixabay.com/api/?key=${API_KEY}&q=${textoBusqueda}&image_type=photo&per_page=100`
-
-    fetch(URL_BUSQUEDA)
-        .then(result => {
-            if (!result.ok) {
-                throw new Error('No se encontraron imagenes')
-            }
-            return result.json()
-        })
-        .then(result => {
-            dataGlobal = result
-            mostrarImagenes(result)
-        })
-        .catch(err => console.error(err))
+    try {
+        const responde = await fetch(URL_BUSQUEDA)
+        const responseJson = await responde.json()
+        dataGlobal = responseJson
+        mostrarImagenes(responseJson)
+    } catch (err) {
+        console.log(err)
+    }
 }
-
-
-
-
 
 function mostrarImagenes(data) {
     console.log(data.hits);
@@ -103,21 +94,21 @@ function crearPaginador() {
         const btnPagina = document.createElement('button');
         btnPagina.textContent = i;
         btnPagina.classList.add('px-4', 'py-2', 'rounded', 'mr-2');
-    
+
         // Agregar clases condicionales
         if (paginaActual === i) {
             btnPagina.classList.add('bg-blue-500', 'text-white'); // Página activa
         } else {
             btnPagina.classList.add('bg-gray-200', 'hover:bg-gray-300'); // Otras páginas
         }
-    
+
         btnPagina.onclick = () => {
             paginaActual = i;
             mostrarImagenes(dataGlobal);
         };
         paginador.appendChild(btnPagina);
     }
-    
+
 
     // Botón "Siguiente"
     if (paginaActual < totalPaginas) {
