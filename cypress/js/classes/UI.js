@@ -11,6 +11,12 @@ class UI {
         // Crea el div
         const divMensaje = document.createElement('div');
         divMensaje.classList.add('text-center', 'alert', 'd-block', 'col-12');
+
+        const alertaPrevia = document.querySelector('.alert')
+
+        if(alertaPrevia) {
+            alertaPrevia.remove()
+        }
         
         // Si es de tipo error agrega una clase
         if(tipo === 'error') {
@@ -18,6 +24,9 @@ class UI {
         } else {
             divMensaje.classList.add('alert-success');
         }
+
+
+        divMensaje.dataset.cy = 'alerta'
 
         // Mensaje de error
         divMensaje.textContent = mensaje;
@@ -69,6 +78,9 @@ class UI {
             // Agregar un botón de eliminar...
             const btnEliminar = document.createElement('button');
             btnEliminar.onclick = () => eliminarCita(id); // añade la opción de eliminar
+        	    
+            btnEliminar.dataset.cy = 'btn-eliminar'
+
 
             btnEliminar.classList.add('btn', 'btn-danger', 'mr-2');
             btnEliminar.innerHTML = 'Eliminar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
@@ -77,6 +89,7 @@ class UI {
             const btnEditar = document.createElement('button');
             btnEditar.onclick = () => cargarEdicion(cita);
 
+            btnEditar.dataset.cy = 'btn-editar'
 
             btnEditar.classList.add('btn', 'btn-info');
             btnEditar.innerHTML = 'Editar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
@@ -97,7 +110,7 @@ class UI {
 
    textoHeading(citas) {
         if(citas.length > 0 ) {
-            heading.textContent = 'Administra tus Citas '
+            heading.textContent = 'Administra tus Citas'
         } else {
             heading.textContent = 'No hay Citas, comienza creando una'
         }
